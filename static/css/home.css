@@ -1,0 +1,195 @@
+#owlsliderofbuttomslider {
+    align-items: center;
+
+}
+
+#owlsliderofbuttomslider img {
+    width: 75px;
+    height: 70px;
+    margin-top: 10px;
+
+}
+
+#owlsliderofbuttomslider a {
+    color: black;
+    text-decoration: none;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#owlsliderofbuttomslider a:hover {
+    color: rgb(57, 57, 253);
+}
+
+#sliderimage img {
+    height: 25rem;
+    background-size: cover;
+
+}
+
+/* #itemsliders{
+    width: 100%;
+    height:300px;
+    background: black;
+    display: flex;
+}
+#itemsliders #cd{
+    width:300px;
+    height: 250;
+    margin: 10px;
+    background: cyan;
+} */
+
+#sliderproduct {
+    width: 200px;
+    /* height: 250px; */
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+}
+#sliderproduct a{text-decoration: none; color: black;}
+
+#sliderproduct img {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+#sliderproduct img:hover {
+    transform: translateY(5px);
+}
+
+#mainsilider {
+    width: 100%;
+    height: 400px;
+
+}
+
+#mainsilderimage {
+    width: 100%;
+}
+
+#mainsilderimage img {
+    width: 100%;
+    height: 400px;
+}
+
+#saidimageofpd {
+    position: absolute;
+    width: 300px;
+    height: 340px;
+    background: white;
+    text-align: center;
+}
+
+#saidimageofpd button {
+    width: 6rem;
+}
+
+#saidimageofpd img {
+    width: 300px;
+    height: 160px;
+}
+
+
+/* product slide 3 */
+
+#carousel{
+    width:100%;
+    height: 340px;
+    margin: 0%;
+    background: white;
+    
+}
+
+
+/* external css: flickity.css */
+
+#sldjsp {
+    /* border: 1px solid rgb(158, 158, 158); */
+    width: 100%;
+    height: 350px;
+    box-shadow: 10px solid rgb(192, 192, 192);
+    
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.carousel {
+    width: 80%;
+    float: right;
+    height: 340px;
+    background: white;
+}
+
+.carousel-cell {
+    width: 25rem;
+    /* height: 200px; */
+    height: 300px;
+    margin-right: 10px;
+    background: #8C8;
+    border-radius: 5px;
+    counter-increment: carousel-cell;
+}
+
+.carousel-cell.is-selected {
+    background: #ED2;
+}
+
+/* cell number */
+.carousel-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(carousel-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+}
+
+/* sale new slider  */
+.pdcard{
+    width:400px;
+    height: 250px;
+    transition: 1s;
+    margin:25px;
+
+}
+.pdcard img{
+    width: 430px;
+    height: 250px;
+}
+.pdnewprice{
+    font-size: 20px;
+    font-weight: 500;
+    width: 430px;
+    padding-left: 1rem;
+    background:#8C8;
+    
+}
+.smaindivs{
+    display: flex;
+}
+.bx{
+    height:23rem;
+    /* overflow: hidden; */
+}
+.pdcard:hover{
+    transform:scale(1.1);
+    box-shadow: 0 0 10px rgb(233, 232, 232);
+}
+/* product slider hiden media query */
+
+@media(max-width:987px){
+    #sldjsp{
+        display: none;
+    }
+    /* #footer1{
+        display: none;
+    } */
+}

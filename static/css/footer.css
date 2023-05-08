@@ -1,0 +1,46 @@
+footer{
+    width: 100%;
+    position: relative;
+    top: 1rem;
+    background:#001a33;
+}
+#ftulfull1 ul td{
+
+    color: rgb(201, 201, 201);
+}
+#ftulfull1{
+    display:flex;
+}
+#ftulfull ul{
+    list-style: none;
+    display: flex;
+}
+#ftulfull ul li a{
+    color: white;
+    text-decoration: none;
+}
+#ftulfull1 ul li{
+    color: white;
+}
+#ftulfull ul li{
+    color: white;
+}
+
+#ftulfull ul li{
+    margin: 2rem;
+}
+
+#ftulfull1 ul{
+    list-style: none;
+    margin: 20px;
+
+}
+#ftulfull1 ul li a{
+    color: white;
+    text-decoration: none;
+}
+@media (max-width:987px){
+    #footer1{
+        display: none;
+    }
+}

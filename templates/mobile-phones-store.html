@@ -1,0 +1,55 @@
+{% extends "index.html" %}
+{% block body %}
+
+
+<div class="card bg-light w-100" id="cardbd" style="border: none;">
+    <div class="card-body">
+        <h5 class="card-title fw-bold">Mobile phones</h5>
+        <div id="fnlinks_of_card">
+
+            <p class="card-text">Mobile phones are no more merely a part of our lives. Whether it's to stay
+                connected
+                with friends and family or to keep abreast of important developments around the world, mobiles are no
+                longer
+                for sending a text or making a call. From budget to state-of-the-art smartphones; indigenous names to
+                global
+                big-wigs - a whole universe of mobiles await you on Flipkart. Whether you’re looking for waterdrop notch
+                screens, a high screen to body ratio, AI-powered sensational cameras, high storage capacity, blazing
+                quick
+                processing engines or reflective glass designs, rest assured you won’t have to venture anywhere else for
+                your smartphone needs. The information you are reading has been last updated on 22-Jan-23. </p>
+
+            <a href="#">Nothing Phone 1 |</a>
+            <a href="#" class="card-link"> Google Pixel 6A |</a>
+            <a href="#" class="card-link"> vivo T1X |</a>
+            <a href="#" class="card-link">OPPO Reno 8 Pro 5G |</a>
+            <a href="#" class="card-link">OPPO Reno7 Pro 5G |</a>
+            <a href="#" class="card-link">OPPO Reno7 5G |</a>
+            <a href="#" class="card-link">iPhone 13 |</a>
+            <a href="#" class="card-link"> iPhone 13 Pro |</a>
+            <a href="#" class="card-link"> iPhone 13 Pro Max |</a>
+            <a href="#" class="card-link"> iPhone 13 Mini |</a>
+            <a href="#" class="card-link"> iPhone 12 |</a>
+        </div>
+    </div>
+</div>
+
+<div class="w-100">
+    <img src="/static/image/nssl.PNG" alt="" class="w-100 p-1">
+</div>
+<div data-flickity='{ "wrapAround": true,"autoPlay": true}' id="storslider">
+    <div><a href=""><img src="/static/image/st.PNG" alt="{{a.slider_image_name}}"></a></div>
+    <div><a href=""><img src="/static/image/st.PNG" alt="{{a.slider_image_name}}"></a></div>
+    <div><a href=""><img src="/static/image/st.PNG" alt="{{a.slider_image_name}}"></a></div>
+    <div><a href=""><img src="/static/image/st3.PNG" alt="{{a.slider_image_name}}"></a></div>
+
+
+</div>
+<div class="w-100">
+
+    <a href=""><img src="/static/image/nssl.PNG" alt="" class="w-100 p-1"></a>
+</div>
+
+
+
+{% endblock body%}

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/static/css/heder.css">
+    <link rel="stylesheet" href="/static/css/sale.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+ 
+
+
+
+    <div class="row" style=" position: relative;left: -2rem;">
+        <div class="col-sm-6 shadow-sm position-sticky" id="zoomxmg"
+            style=" position: sticky !important; top: 0 !important; ">
+            <div class="shadow-sm" style="width:7rem; position: absolute;align-items: center;">
+                <p id="bnt1" style="margin-left:4rem;"><i class="fa-solid fa-chevron-up"></i></p>
+            </div>
+            <br>
+            <ul id="slidesmmg">
+                {% for a in promg %}
+                <li><img src="{{a.image.url}}" class="small_img" alt=""></li>
+
+                {% endfor %}
+
+            </ul>
+
+            <br>
+            <div class="shadow-sm" style="width:8rem; position:absolute;top:27rem;">
+                <p href="" id="bnt2" style="margin-left:4rem;"><i class="fa-sharp fa-solid fa-chevron-down"></i></p>
+            </div>
+
+
+            <img src="{{sale_product.Products_image.url}}" class="big_image" alt="{{sale_product.image_name}}">
+            <br>
+            <br>
+            <div id="btnss">
+                <ul>
+                    <li><a href="" class="nav-link text-white mx-3 p-3 fw-bold"><i
+                                class="fa-solid fa-cart-shopping"></i> ADD TO CARD</a></li>
+                    <li><a href="/checkeout" id="by" class="nav-link text-white mx-3 p-3 fw-bold"><i
+                                class="fa-solid fa-bolt-lightning"></i> BUY NOW</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="col-sm-6" style="padding-left: 6rem;">
+
+            <h3 class="pb-4 mb-4 fst-italic border-bottom">
+                From the Firehose
+            </h3>
+
+            <article class="blog-post">
+                <p>{{sale_product.Product_name}}</p>
+                <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
+
+                <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap.
+                    Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
+                <hr>
+                <p>This is some additional paragraph placeholder content. It has been written to fill the available
+                    space and show how a longer snippet of text affects the surrounding content. We'll repeat it
+                    often
+                    to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+                <h2>Blockquotes</h2>
+                <p>This is an example blockquote in action:</p>
+                <blockquote class="blockquote">
+                    <p>Quoted text goes here.</p>
+                </blockquote>
+                <p>This is some additional paragraph placeholder content. It has been written to fill the available
+                    space and show how a longer snippet of text affects the surrounding content. We'll repeat it
+                    often
+                    to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+                <h3>Example lists</h3>
+                <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the
+                    other
+                    highly repetitive body text used throughout. This is an example unordered list:</p>
+                <ul>
+                    <li>First list item</li>
+                    <li>Second list item with a longer description</li>
+                    <li>Third list item to close it out</li>
+                </ul>
+                <p>And this is an ordered list:</p>
+                <ol>
+                    <li>First list item</li>
+                    <li>Second list item with a longer description</li>
+                    <li>Third list item to close it out</li>
+                </ol>
+                <p>And this is a definition list:</p>
+                <dl>
+                    <dt>HyperText Markup Language (HTML)</dt>
+                    <dd>The language used to describe and define the content of a Web page</dd>
+                    <dt>Cascading Style Sheets (CSS)</dt>
+                    <dd>Used to describe the appearance of Web content</dd>
+                    <dt>JavaScript (JS)</dt>
+                    <dd>The programming language used to build advanced Web sites and applications</dd>
+                </dl>
+                <h2>Inline HTML elements</h2>
+                <p>HTML defines a long list of available inline tags, a complete list of which can be found on the
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer
+                        Network</a>.
+                </p>
+                <ul>
+                    <li><strong>To bold text</strong>, use <code
+                            class="language-plaintext highlighter-rouge">&lt;strong&gt;</code>.</li>
+                    <li><em>To italicize text</em>, use <code
+                            class="language-plaintext highlighter-rouge">&lt;em&gt;</code>.</li>
+                    <li>Abbreviations, like <abbr title="HyperText Markup Language">HTML</abbr> should use <code
+                            class="language-plaintext highlighter-rouge">&lt;abbr&gt;</code>, with an optional <code
+                            class="language-plaintext highlighter-rouge">title</code> attribute for the full phrase.
+                    </li>
+                    <li>Citations, like <cite>— Mark Otto</cite>, should use <code
+                            class="language-plaintext highlighter-rouge">&lt;cite&gt;</code>.</li>
+                    <li><del>Deleted</del> text should use <code
+                            class="language-plaintext highlighter-rouge">&lt;del&gt;</code> and <ins>inserted</ins>
+                        text
+                        should use <code class="language-plaintext highlighter-rouge">&lt;ins&gt;</code>.</li>
+                    <li>Superscript <sup>text</sup> uses <code
+                            class="language-plaintext highlighter-rouge">&lt;sup&gt;</code> and subscript
+                        <sub>text</sub> uses <code class="language-plaintext highlighter-rouge">&lt;sub&gt;</code>.
+                    </li>
+                </ul>
+                <p>Most of these elements are styled by browsers with few modifications on our part.</p>
+                <h2>Heading</h2>
+                <p>This is some additional paragraph placeholder content. It has been written to fill the available
+                    space and show how a longer snippet of text affects the surrounding content. We'll repeat it
+                    often
+                    to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+                <h3>Sub-heading</h3>
+                <p>This is some additional paragraph placeholder content. It has been written to fill the available
+                    space and show how a longer snippet of text affects the surrounding content. We'll repeat it
+                    often
+                    to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+                <pre><code>Example code block</code></pre>
+                <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the
+                    other
+                    highly repetitive body text used throughout.</p>
+
+
+
+                <div class="blog-pagination" aria-label="Pagination">
+                    <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+                    <a class="btn btn-outline-secondary rounded-pill disabled">Newer</a>
+                </div>
+
+        </div>
+
+    </div>
+    <script>
+        let sliders1 = document.querySelectorAll(".small_img");
+        let downbt=document.getElementById("bnt2")
+        let upbt=document.getElementById("bnt1")
+        let cn = 0;
+    
+        upbt.addEventListener("click",()=>{
+            cn++
+            if (cn==sliders1.length){
+                cn=0
+            }
+            else{
+                imageSlider()
+            }
+
+        })
+        downbt.addEventListener("click",()=>{
+            a=cn--
+            console.log(a)
+
+            if (cn==-sliders1.length){
+                cn=sliders1.length
+            }
+            else{
+                imageSlider()
+            }
+            imageSlider()
+        })
+        sliders1.forEach((sliders, index) => {
+            sliders.style.left = `${index * 20}%`
+
+        });
+        const imageSlider = () => {
+            sliders1.forEach((sliders) => {
+                sliders.style.transform = `translateY(${cn * 20}%)`
+            })
+        }
+    </script>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer id="footer1">
+        <div id="ftulfull1" class="mx-5">
+            <ul>
+                <td>About</td>
+                <li><a href="">Contact US</a></li>
+                <li><a href="">About US</a></li>
+                <li><a href="">Careers</a></li>
+                <li><a href="">Flipkart Stories</a></li>
+                <li><a href="">Press</a></li>
+                <li><a href="">Flipkart Wholesale</a></li>
+                <li><a href="">Corporate Information</a></li>
+            </ul>
+            <ul>
+                <td>Help</td>
+                <li><a href="">Payments</a></li>
+                <li><a href="">Shipping</a></li>
+                <li><a href="">Cancellation & Returns</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Report Infringement</a></li>
+                <li><a href=""></a></li>
+
+            </ul>
+            <ul>
+                <td>Policy</td>
+                <li><a href="">Return Policy</a></li>
+                <li><a href="">Terms Of Use</a></li>
+                <li><a href="">Security</a></li>
+                <li><a href="">Privacy</a></li>
+                <li><a href="">Sitemap</a></li>
+                <li><a href="">EPR Compliance</a></li>
+            </ul>
+            <ul>
+                <td>Social</td>
+                <li><a href="">Facebook</a></li>
+                <li><a href="">Twitter</a></li>
+                <li><a href="">YouTube</a></li>
+            </ul>
+            <ul>
+                <li><img src="/static/image/flg6ln.PNG" alt=""></li>
+            </ul>
+            <ul>
+                <td>Mail us</td>
+                <li>Flipkart Internet Private Limited,</li>
+                <li>Buildings Alyssa, Begonia &</li>
+                <li>Clove Embassy Tech Village,</li>
+                <li>Outer Ring Road, Devarabeesanahalli Village,</li>
+                <li>Bengaluru, 560103,</li>
+                <li>Karnataka, India</li>
+            </ul>
+            <ul>
+                <td>Registered Office Address:</td>
+                <li>Flipkart Internet Private Limited,</li>
+                <li>Buildings Alyssa, Begonia &</li>
+                <li>Clove Embassy Tech Village,</li>
+                <li>Outer Ring Road, Devarabeesanahalli Village,</li>
+                <li>Bengaluru, 560103,</li>
+                <li>Karnataka, India</li>
+                <li>CIN : U51109KA2012PTC066107</li>
+                <li>Telephone: <a href="" class="text-primary">044-45614700</a></li>
+                <li></li>
+            </ul>
+        </div>
+        <hr class="text-white">
+        <div id="ftulfull">
+            <ul>
+                <li><img src="/static/image/footerlg1.PNG" alt=""><a href="">Become a Seller</a></li>
+                <li><img src="/static/image/footerlg2.PNG" alt=""><a href="">Advertise</a></li>
+                <li><img src="/static/image/flg3.PNG" alt=""><a href="">Gift Cards</a></li>
+                <li><img src="/static/image/flg4.PNG" alt=""><a href="">Help Center</a></li>
+                <li>© 2007-2023 Flipkart.com</li>
+                <li><img src="/static/image/flg5.PNG" alt=""><a href=""></a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="/static/js/zoomsl.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            $(".small_img").hover(function () {
+                $(".big_image").attr("src", $(this).attr('src'))
+            })
+        })
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".big_image").imagezoomsl({
+                zoomrange: [3.3]
+            })
+        })
+
+    </script>
+
+</body>
+
+</html>

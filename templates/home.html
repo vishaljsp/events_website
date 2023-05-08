@@ -1,0 +1,596 @@
+{% extends "index.html" %}
+{% block body %}
+
+<!-- after heder slider
+ -->
+<div class="nav-scroller bg-body shadow-lg">
+    <nav class="nav nav-underline" aria-label="Secondary navigation">
+
+        <div class="owl-carousel owl-theme">
+            <div class="item" id="owlsliderofbuttomslider">
+                <img src="/static/image/r1.PNG" alt="">
+                <a href="">Grocery</a>
+            </div>
+            <div class="item" id="owlsliderofbuttomslider">
+                <img src="/static/image/r2.PNG" alt="">
+                <a href="/mobile-phones-store">Mobiles</a>
+            </div>
+            <div class="item" id="owlsliderofbuttomslider">
+                <img src="/static/image/r3.PNG" alt="">
+                <a href="">Fashion</a>
+            </div>
+            <div class="item" id="owlsliderofbuttomslider">
+                <img src="/static/image/r4.PNG" alt="">
+                <a href="">Electronics</a>
+            </div>
+            <div class="item" id="owlsliderofbuttomslider">
+                <img src="/static/image/r5.PNG" alt="">
+                <a href="">Home</a>
+            </div>
+            <div class="item" id="owlsliderofbuttomslider">
+                <img src="/static/image/r6.PNG" alt="">
+                <a href="">Appliances</a>
+            </div>
+            <div class="item" id="owlsliderofbuttomslider">
+                <img src="/static/image/r7.PNG" alt="">
+                <a href="">Travel</a>
+            </div>
+            <div class="item" id="owlsliderofbuttomslider">
+                <img src="/static/image/r8.PNG" alt="">
+                <a href="">TopOffers</a>
+            </div>
+
+
+            <div class="item" id="owlsliderofbuttomslider">
+                <img src="/static/image/r9.PNG" alt="">
+                <a href="">TwoWheelers</a>
+            </div>
+
+        </div>
+    </nav>
+</div> 
+
+
+<div class="my-2" data-flickity='{"wrapAround": true,"autoPlay": true}' id="mainsilider">
+    {% for a in slider_home %}
+    <div id="mainsilderimage"><a href=""><img src="{{a.slider_image}}" alt="{{a.slider_image_name}}"></a></div>
+
+    {% endfor %}
+
+</div>
+<!-- in phone after silder -->
+
+<!-- resentli vews -->
+<div id="hide1">
+    <div class="nav-scroller bg-body shadow-lg">
+        <p class="f-5 mx-2">Resently View</p>
+        <nav class="nav nav-underline" aria-label="Secondary navigation">
+            <div class="owl-carousel owl-theme">
+                <div class="item" id="owlsliderofbuttomslider">
+                    <img src="/static/image/r1.PNG" alt="">
+                    <a href="">Grocery</a>
+                </div>
+                <div class="item" id="owlsliderofbuttomslider">
+                    <img src="/static/image/r2.PNG" alt="">
+                    <a href="">Mobiles</a>
+                </div>
+                <div class="item" id="owlsliderofbuttomslider">
+                    <img src="/static/image/r3.PNG" alt="">
+                    <a href="">Fashion</a>
+                </div>
+                <div class="item" id="owlsliderofbuttomslider">
+                    <img src="/static/image/r4.PNG" alt="">
+                    <a href="">Electronics</a>
+                </div>
+                <div class="item" id="owlsliderofbuttomslider">
+                    <img src="/static/image/r5.PNG" alt="">
+                    <a href="">Home</a>
+                </div>
+                <div class="item" id="owlsliderofbuttomslider">
+                    <img src="/static/image/r6.PNG" alt="">
+                    <a href="">Appliances</a>
+                </div>
+                <div class="item" id="owlsliderofbuttomslider">
+                    <img src="/static/image/r7.PNG" alt="">
+                    <a href="">Travel</a>
+                </div>
+                <div class="item" id="owlsliderofbuttomslider">
+                    <img src="/static/image/r8.PNG" alt="">
+                    <a href="">TopOffers</a>
+                </div>
+
+
+                <div class="item" id="owlsliderofbuttomslider">
+                    <img src="/static/image/r9.PNG" alt="">
+                    <a href="">TwoWheelers</a>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- 2card image deels and offer  border images -->
+<div id="hide1">
+    <div class="row row-cols-2 w-100 row-cols-md-3 g-4 w-100 bg-white shadow-lg">
+        <div class="col">
+            <div class="card">
+                <img src="/static/image/bd1.PNG" class="card-img-top mx-1" alt="...">
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="/static/image/bd2.PNG" class="card-img-top" alt="...">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- offers and deels small  -->
+<br>
+<div id="hide1">
+    <div class="row row-cols-3 w-100 row-cols-md-3 g-4 w-100 bg-white shadow-lg">
+        <div class="col">
+            <div class="card">
+                <img src="/static/image/bdmg1.PNG" class="card-img-top mx-1" alt="...">
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="/static/image/bdmg2.PNG" class="card-img-top" alt="...">
+
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <img src="/static/image/bdmg4.PNG" class="card-img-top" alt="...">
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>
+
+<br>
+<!-- 4 divs group  -->
+<div id="product_div" class="p-5">
+    <p class="text-white fs-5" style="position: relative;left:-2rem">Splotlight's on</p>
+    <button type="button" class="btn btn-light"
+        style="float:right; position: relative;top: -3.10rem; left:2rem">view</button>
+    <div class="row row-cols-2 w-100 row-cols-md-3 g-4 w-100 bg-white shadow-lg align-items-center">
+        <div class="col">
+            <div class="card align-items-center">
+                <img src="/static/image/fn1.webp" class="card-img-top" alt="...">
+                <p>Name</p>
+                <p> From 500</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card align-items-center">
+                <img src="/static/image/fn2.webp" class="card-img-top" alt="...">
+                <p>Name</p>
+                <p> From 500</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card align-items-center">
+                <img src="/static/image/fn3.webp" class="card-img-top" alt="...">
+                <p>Name</p>
+                <p> From 500</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card align-items-center">
+                <img src="/static/image/fn4.webp" class="card-img-top" alt="...">
+                <p>Name</p>
+                <p> From 500</p>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</div>
+
+
+<!-- 3 card image deels and offer  -->
+<div id="hide1">
+    <div class="bg-white shadow-lg">
+        <div class="row row-cols-2  w-100 row-cols-md-3 g-4  align-items-center">
+            <h5 class="card-header"><img src="/static/image/t1.PNG" alt="" style="width:2.5rem">suggested for you<a
+                    href="#" class="btn btn-primary" style="position:absolute;right: 5rem;">view</a></h5>
+
+            <div class="col w-100">
+                <div class="card align-items-center">
+                    <img src="/static/image/fn2.webp" class="card-img-top" alt="...">
+                    <p>Name</p>
+                    <p> From 500</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card align-items-center">
+                    <img src="/static/image/fn3.webp" class="card-img-top" alt="...">
+                    <p>Name</p>
+                    <p> From 500</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card align-items-center">
+                    <img src="/static/image/fn4.webp" class="card-img-top" alt="...">
+                    <p>Name</p>
+                    <p> From 500</p>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- 2card image deels and offer  border images -->
+<div id="hide1">
+    <div class="row row-cols-2 w-100 row-cols-md-3 g-4 w-100 bg-white shadow-lg">
+        <div class="col">
+            <div class="card">
+                <img src="/static/image/bd1.PNG" class="card-img-top" alt="...">
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="/static/image/bd2.PNG" class="card-img-top" alt="...">
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="/static/image/bd2.PNG" class="card-img-top" alt="...">
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="/static/image/bd2.PNG" class="card-img-top" alt="...">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- offers and deels  -->
+<br>
+<div id="hide1">
+    <div class="row row-cols-3 w-100 row-cols-md-3 g-4 w-100 bg-white shadow-lg">
+        <div class="col">
+            <div class="card">
+                <img src="/static/image/bdmg1.PNG" class="card-img-top mx-1" alt="...">
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="/static/image/bdmg2.PNG" class="card-img-top" alt="...">
+
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <img src="/static/image/bdmg4.PNG" class="card-img-top" alt="...">
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>
+<br>
+
+<!-- leptop code here  -->
+
+
+<!-- Product slider -->
+
+
+<div class="w-100 bg-white shadow-lg" id="sldjsp">
+    <div id="saidimageofpd">
+        <p class="fs-3">Best of <br>Electronics</p>
+        <button type="button" class="btn btn-primary">View</button><br><br><br>
+        <img src="/static/image/pdmgsaid.PNG" alt="">
+    </div>
+
+    <div class="carousel sh" data-flickity='{ "groupCells": true}'>
+        {% for a in product_slider %}
+        <div id="sliderproduct">
+            <a href=""><img src="{{a.Products_image.url}}" alt="{{a.image_name}}">
+                <p>{{a.Product_name | truncatechars:50}} </p>
+                <p style="color:rgb(6, 175, 6)">From {{a.Product_price}}</p>
+                {% comment %} <p>{{a.brand}}</p>
+            </a> {% endcomment %}
+
+        </div>
+        {% endfor %}
+
+        <!--<div id="sliderproduct">
+            <a href=""><img src="/static/image/pd3.PNG" alt=""></a>
+            <p class="fs-5">name</p>
+            <p class="fs-5">from 5000$</p>
+            <p>Zebronis</p>
+        </div>
+        <div id="sliderproduct">
+            <a href=""><img src="/static/image/pd4.PNG" alt=""></a>
+            <p class="fs-5">name</p>
+            <p class="fs-5">from 5000$</p>
+            <p>Zebronis</p>
+        </div>
+        <div id="sliderproduct">
+            <a href=""><img src="/static/image/pd5.PNG" alt=""></a>
+            <p class="fs-5">name</p>
+            <p class="fs-5">from 5000$</p>
+            <p>Zebronis</p>
+        </div> -->
+    </div>
+</div>
+
+<br>
+
+<!-- deels  -->
+
+<div class="row row-cols-3 w-100 row-cols-md-3 g-4 w-100 bg-white shadow-lg p-2">
+    <div class="col">
+        <div class="card">
+            <img src="/static/image/of4.PNG" class="card-img-top mx-1" alt="...">
+
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <img src="/static/image/of3.PNG" class="card-img-top" alt="...">
+
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card">
+            <img src="/static/image/of2.PNG" class="card-img-top" alt="...">
+
+        </div>
+    </div>
+
+
+
+
+</div>
+<br>
+
+<!-- Product slider 2 -->
+<div class="w-100 bg-white shadow-lg" id="sldjsp">
+    <div id="saidimageofpd">
+        <p class="fs-3">Best of <br>Electronics</p>
+        <button type="button" class="btn btn-primary">View</button><br><br><br>
+        <img src="/static/image/pdmgsaid.PNG" alt="">
+    </div>
+    <div class="carousel sh" data-flickity='{ "groupCells": true}'>
+
+        <div id="sliderproduct">
+            <a href=""><img src="/static/image/pd1.PNG" alt=""></a>
+            <p class="fs-5">name</p>
+            <p class="fs-5">from 5000$</p>
+            <p>Zebronis</p>
+        </div>
+        <div id="sliderproduct">
+            <a href=""><img src="/static/image/pd2.PNG" alt=""></a>
+            <p class="fs-5">name</p>
+            <p class="fs-5">from 5000$</p>
+            <p>Zebronis</p>
+        </div>
+        <div id="sliderproduct">
+            <a href=""><img src="/static/image/pd3.PNG" alt=""></a>
+            <p class="fs-5">name</p>
+            <p class="fs-5">from 5000$</p>
+            <p>Zebronis</p>
+        </div>
+        <div id="sliderproduct">
+            <a href=""><img src="/static/image/pd4.PNG" alt=""></a>
+            <p class="fs-5">name</p>
+            <p class="fs-5">from 5000$</p>
+            <p>Zebronis</p>
+        </div>
+        <div id="sliderproduct">
+            <a href=""><img src="/static/image/pd5.PNG" alt=""></a>
+            <p class="fs-5">name</p>
+            <p class="fs-5">from 5000$</p>
+            <p>Zebronis</p>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<div class="w-100 bg-white shadow-lg bx">
+    <h2 class="mx-5">Featured Brands</h2>
+    <div id="carousel" data-flickity='{ "groupCells": true, "hover":true}'>
+        <div class="pdcard" id="ck">
+            <img src="/static/image/pdsale1.PNG" alt="">
+            <div class="pdnewprice">
+                Start From $ 500*
+            </div>
+        </div>
+        <div class="pdcard" id="ck">
+            <img src="/static/image/pdsale1.PNG" alt="">
+            <div class="pdnewprice">
+                Start From $ 500*
+            </div>
+        </div>
+        <div class="pdcard" id="ck">
+            <img src="/static/image/pdsale1.PNG" alt="">
+            <div class="pdnewprice">
+                Start From $ 500*
+            </div>
+        </div>
+        <div class="pdcard" id="ck">
+            <img src="/static/image/pdsale1.PNG" alt="">
+            <div class="pdnewprice">
+                Start From $ 500*
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+
+
+<!-- Product slider 3 -->
+<div class="w-100 bg-white shadow-lg" id="sldjsp">
+    <div id="carousel" data-flickity='{ "groupCells": true}'>
+
+        <div id="sliderproduct">
+            <a href=""><img src="/static/image/pd1.PNG" alt=""></a>
+            <p class="fs-5">name</p>
+            <p class="fs-5">from 5000$</p>
+            <p>Zebronis</p>
+        </div>
+        <div id="sliderproduct">
+            <a href=""><img src="/static/image/pd2.PNG" alt=""></a>
+            <p class="fs-5">name</p>
+            <p class="fs-5">from 5000$</p>
+            <p>Zebronis</p>
+        </div>
+        <div id="sliderproduct">
+            <a href=""><img src="/static/image/pd3.PNG" alt=""></a>
+            <p class="fs-5">name</p>
+            <p class="fs-5">from 5000$</p>
+            <p>Zebronis</p>
+        </div>
+        <div id="sliderproduct">
+            <a href=""><img src="/static/image/pd4.PNG" alt=""></a>
+            <p class="fs-5">name</p>
+            <p class="fs-5">from 5000$</p>
+            <p>Zebronis</p>
+        </div>
+        <div id="sliderproduct">
+            <a href=""><img src="/static/image/pd5.PNG" alt=""></a>
+            <p class="fs-5">name</p>
+            <p class="fs-5">from 5000$</p>
+            <p>Zebronis</p>
+        </div>
+    </div>
+</div>
+
+<br><br>
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Top Stories:<b>Brand Directory</b></h5>
+        <p class="card-text">Top Stories:Brand Directory
+            MOST SEARCHED FOR ON FLIPKART:Flipkart Axis Bank Super Elite Credit cardBounce Infinity E1Buy Laptop on
+            EMIvivo T1XOPPO Reno8 5GOPPO Reno8 Pro 5GNothing Phone 1Sell Old Mobile PhonesASUS TUF Gaming F15 Core i5
+            10th GenElectronics StoreOPPO A16KVivo Y33TOPPO Reno7 5GBathroom Exhaust FanSamsung Window ACOPPO Reno7 Pro
+            5GiPhone 13iPhone 13 ProiPhone 13 Pro MaxiPhone 13 MiniGoogle Pixel 6a coversFlipkart QuickBooksFlipkart
+            Help CentreOnline Boat StoreCovers from Rs 99Flipkart Track OrdersFlipkart Manage OrdersFlipkart Return
+            OrdersFlipkart Gift Cards StoreFlipkart Axis Bank Credit CardFlipkart Pay Later
+            MOBILES:iPhone 12 64GBiPhone 12 Pro 512GBiPhone 12 128GBVivo Y91iVivo Y11Vivo Y15Vivo Y50Vivo Y12Reno2 FOppo
+            A12Oppo F15Oppo A31Samsung A71Samsung A51Samsung A31Realme X2iPhone 11iPhone 11 ProiPhone 11 Pro MaxMobile
+            Offersiphone x4G MobileNokia MobileSamsung MobileiphoneOppo MobileVivo Mobile
+            CAMERA:GoPro Action CameraNikon CameraCanon CameraSony CameraCanon DSLRNikon DSLR
+            LAPTOPS:MacBook Pro M2Premium Laptopacer Ryzen 3 Dual Core 3250U - (8 GB/256 GB SSD/Windows 11 Home) Z2-493
+            Thin and Light LaptopASUS Vivobook S14 OLED (2022)ASUS Zenbook 14 OLED (2022)Realme Book Prime Core i5 11th
+            GenMicrosoft Surface Go Pentium 128GBBranded LaptopsApple LaptopsAcer LaptopsLenovo LaptopsDell LaptopsAsus
+            LaptopsHP LaptopsGaming Laptops2 in 1 LaptopsLaptopsDell latest laptops 2022HP latest laptops 2022Infinix
+            INBook X1 Neo Series Celeron Quad Core - (8 GB/256 GB SSD/Windows 11 Home) XL22 Thin and Light
+            LaptopMicrosoft Laptops12th Gen Intel Core Laptops
+            TVS:Nokia TVPanasonic TVThomson TVVu TVRealme TVMotorola TVOnePlus TVsLG TVTVSony TVSamsung TVAndroid
+            TelevisionIffalcon TvMi TV
+            LARGE APPLIANCES:TV & Appliances End of Season SaleTelevisionWashing MachinesRefrigeratorsAir
+            ConditionersElectric CookersElectric Jug(Heater) / Travel KettlesInduction CooktopsInverters /
+            stabilizerIrons / Iron BoxMixer Grinder JuicerWet GrindersChimneysMicrowave OvensVacuum CleanersWater
+            PurifierFanMarQ Customer Care
+            CLOTHING:Men ShirtsKurta PajamaKurtasMen T-ShirtsJeansSareeDressesKids DressesDesigner Salwar
+            SuitsBraDesigner KurtisTrack PantMen KurtasGym WearParty DressesPalazzo SuitsBoys ClothingGlovesNightyMaxi
+            DressesAnarkaliGownsCulottesSalwar SuitsKurtisDesigner SareesLeggingsShortsGeorgette SareesEthnic WearBriefs
+            & TrunksNike WatchesAscot TieCorset Tops TunicsLeather PU SkirtsCorset tops camisolesWomen magenta
+            earringsNo collar jacketsGreen dress materialBlack patiala kurta setMen camel shoes casualBlack
+            pathaniTassel SareesKhaki dressesKids formal dressesMauve shirtsWomen henleyuppada pattu sareesLeopard
+            dressesSleeveless shrugs
+            FOOTWEAR:ShoesAdidas ShoesReebok ShoesNike ShoesPuma ShoesBootsBata ShoesWoodland ShoesSkechers
+            ShoesSneakersWomens BootsSports ShoesLoafersSandalsLotto Sports ShoesCasual ShoesWomens Skechers ShoesAsics
+            Sports ShoesFormal ShoesSchool Shoes
+            GROCERIES:PhonePe Grocery VoucherHand WashSoapCashew NutsSunflower OilEggsToilet CleanerHarpic Toilet
+            CleanerDettol SoapMustard OilBiscuitsCheesePatanjali AttaFortune OilAashirvaad AttaTea
+            BEST SELLING ON FLIPKART:Fire-Boltt Ninja Calling Pro Bluetooth Calling Smartwatch 1.69 inch HD Display
+            SmartwatchBest Gas GeyserKitchen GeyserNutri BlendersPortable Air CoolerBest Air CoolerBagsHitachi
+            Refrigerator 3 DoorBooksToysCandlesHelmetsWall ClocksBaby FoodChocolatesCyclesCalculatorsLipsticksMaskVertiv
+            UPSFastrack WatchesWalletsEarringsGold CoinsRealme Pad MiniHandbagsconekt SW2 SmartwatchMivi DuoPods
+            a350Speaker Cleaner
+            FURNITURE:FurnitureSofasBedsDining setsWardrobesMattressesTV UnitsTablesChairsShelvesBean BagsOffice
+            ChairsComputer TableOffice TablesRed SofaWakefit BedsWhite SofaWakefit MattressGreen SofaBlack SofaBrown
+            Sofa
+            BGMH:Whey ProteinHomeopathyBounce InfinityChristmas GiftsCalendar 2023Online GuitarBooks StoreMusical
+            Instrument StoreDabur ChyawanprashBaidyanath ChyawanprashEnergy DrinksToysMilk Drink
+            MixesRakhiChyawanprashIndian FlagProtein Supplements</p>
+        <br><br>
+        <p class="fw-bold">Flipkart: The One-stop Shopping Destination</p><br>
+        <p>E-commerce is revolutionizing the way we all shop in India. Why do you want to hop from one store to another
+            in search of the latest phone when you can find it on the Internet in a single click? Not only mobiles.
+            Flipkart houses everything you can possibly imagine, from trending electronics like laptops, tablets,
+            smartphones, and mobile accessories to in-vogue fashion staples like shoes, clothing and lifestyle
+            accessories; from modern furniture like sofa sets, dining tables, and wardrobes to appliances that make your
+            life easy like washing machines, TVs, ACs, mixer grinder juicers and other time-saving kitchen and small
+            appliances; from home furnishings like cushion covers, mattresses and bedsheets to toys and musical
+            instruments, we got them all covered. You name it, and you can stay assured about finding them all here. For
+            those of you with erratic working hours, Flipkart is your best bet. Shop in your PJs, at night or in the wee
+            hours of the morning. This e-commerce never shuts down.</p>
+
+    </div>
+</div>
+<script>
+    $('.owl-carousel').owlCarousel({
+        // loop: true,
+        $('.owl-carousel').css("display","block")
+        margin: 10,
+        nav: false,
+        dots: false,
+
+        responsive: {
+            0: {
+                items: 4
+            },
+            600: {
+                items: 7
+            },
+            1000: {
+                items: 9
+            }
+        }
+    })
+</script>
+<script>
+    let a = document.getElementById("sechederhd")
+    a.remove()
+    setTimeout(() => {
+
+        let a = document.querySelectorAll('ol');
+        a.forEach((el) => {
+            el.remove()
+
+        })
+        console.log("thi isaaaaaa ", a)
+        console.log(a.length, "this is len")
+    }, 2000)
+
+</script>
+
+
+{% endblock body %}

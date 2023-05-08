@@ -1,0 +1,744 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flipcard</title>
+  <!-- my phone css  -->
+  <link rel="stylesheet" href="/static/css/phone.css">
+  <link rel="stylesheet" href="/static/css/moncard.css">
+  <!-- my css  -->
+  <link rel="stylesheet" href="/static/css/mobile-phones-store.css">
+
+  <link rel="stylesheet" href="/static/css/heder.css">
+  <link rel="stylesheet" href="/static/css/s2.css">
+  <link rel="stylesheet" href="/static/css/login.css">
+  <link rel="stylesheet" href="/static/css/home.css">
+  <link rel="stylesheet" href="/static/css/footer.css">
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <!-- font font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- owl courser -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- flicli slider link -->
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+{% block head %}
+{% endblock head %}
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container-fluid">
+      <div class="wrapper" id="nevsaidphon">
+        <input type="checkbox" id="btn" hidden>
+        <label for="btn" class="menu-btn">
+          <i class="fas fa-bars"></i>
+          <i class="fas fa-times"></i>
+        </label>
+        <nav id="sidebar">
+          <div class="title">
+            <i class="fa-solid fa-user"> </i> login & singh up
+          </div>
+          <ul class="list-items">
+            <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="#"><i class="fas fa-sliders-h"></i>Clients</a></li>
+            <li><a href="#"><i class="fas fa-address-book"></i>Services</a></li>
+            <li><a href="#"><i class="fas fa-cog"></i>Settings</a></li>
+            <li><a href="#"><i class="fas fa-stream"></i>Features</a></li>
+            <li><a href="#"><i class="fas fa-user"></i>About us</a></li>
+            <li><a href="#"><i class="fas fa-globe-asia"></i>Languages</a></li>
+            <li><a href="#"><i class="fas fa-envelope"></i>Contact us</a></li>
+          </ul>
+        </nav>
+        <a href="#" style="position: absolute;left:3rem;top:-.1rem;text-decoration:none;color: white;">Navbar</a>
+
+        <br>
+      </div><br><br>
+      <div id="phonicon" class="ms-auto" style="float:right;">
+        <a href="" class="text-white mx-2"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="" class="text-decoration-none text-white">Login</a>
+      </div>
+
+
+      <a href="/" class="navbar-brand text-white fs-5 fw-bold" id="fliplogo">Flipkard</a>
+      <form class="d-flex" id="sech">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      </form>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+
+
+            <!-- Button trigger modal -->
+            {% if v%}
+            
+            <button type="button" class="btn bg-white fw-bold fs-sm px-4 my-1 text-primary dropdown-toggle" style="border-radius: 0%;">
+              myprofile
+            </button>
+
+            {% else %}
+            <button type="button" class="btn bg-white fw-bold fs-sm px-4 my-1 text-primary dropdown-toggle"
+              data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="border-radius: 0%;">
+              Login
+            </button>
+            {% endif %}
+
+
+
+
+
+
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog  modal-dialog-centered  modal-lg">
+              <div class="modal-content">
+
+                <div class="modal-body py-0 px-0">
+                  <div class="bg-primary text-white" style="width: 18rem;height: 30rem;text-align: center;">
+                    <h1>Sing up</h1>
+                    <p>Get access to your Orders, Wishlist and Recommendations</p>
+                    <img src="/static/image/loginmg.png" alt="" style="position:relative;top:13rem">
+                  </div>
+                </div>
+                <div id="loginfrom">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                  <form action="/" method="Post" id="singhupform">
+                    {% csrf_token %}
+                    <p id="errorshowofnumber" style="color: red;"></p>
+                    <input type="text" placeholder="Enetr Mobile Number" name="numberms" id="phoneNumber" value="+91"><br><br>
+                    <p>By continuing, you agree to Flipkart's <a href=""> Terms of Use</a> and <a href="">
+                        Privacy<br>
+                        Policy.</a></p><br>
+
+                    <input type="text" id="otpinput" name="otpphon" placeholder="Enetr OTP"><br><br>
+
+                    <button id="lbn" class="fs-5 fw-bold mx-5 text-white">Request otp</button>
+                    <!-- <button type="text" class="fs-5 fw-bold mx-5 text-white">sing up</button>
+                     -->
+                     <a href="/check">sing up</a>
+
+                    <button class="shadow-sm bg-white text-primary mx-5"  id="acne">Exsting User? Log in</button>
+
+                  </form><br>
+                  <a href="" class="text-decoration-none fw-bold mx-5" id="accne">New to Flipkart ? Create an
+                    account</a>
+
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+
+            <!-- Modal -->
+            <!-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+              aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog  modal-dialog-centered  modal-lg">
+                <div class="modal-content">
+
+                  <div class="modal-body py-0 px-0">
+                    <div class="bg-primary text-white" style="width: 18rem;height: 30rem;text-align: center;">
+                      <h1>Login</h1>
+                      <p>Get access to your Orders, Wishlist and Recommendations</p>
+                      <img src="/static/image/loginmg.png" alt="" style="position:relative;top:13rem">
+                    </div>
+                  </div>
+                  <div id="loginfrom">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                    <form action="" method="Post">
+                      <input type="text" placeholder="Enetr Emial/Mobile Number"><br><br>
+                      <p>By continuing, you agree to Flipkart's <a href=""> Terms of Use</a> and <a href=""> Privacy<br>
+                          Policy.</a></p>
+                      <button id="lbn" class="fs-5 fw-bold mx-5 text-white">Request OTP</button>
+
+                    </form>
+                    <a href="" class="text-decoration-none fw-bold mx-5" id="acne">New to Flipkart? Create an
+                      account</a>
+
+                  </div>
+
+
+                </div>
+              </div>
+            </div> -->
+
+
+
+
+
+
+
+
+
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="width:17rem;">
+              <li class="fw-bold mx-3">New Cusomer?<a class="mx-4 text-decoration-none" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Sing up</a></li>
+
+              <!-- Button trigger modal -->
+              <!-- <button type="button" class="btn  fw-bold  fs-sm text-primary"
+                data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="border-radius: 0%;">
+                New Cusomer?  
+              </button> -->
+
+              <!-- Modal -->
+              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog  modal-dialog-centered  modal-lg">
+                  <div class="modal-content">
+
+                    <div class="modal-body py-0 px-0">
+                      <div class="bg-primary text-white" style="width: 18rem;height: 30rem;text-align: center;">
+                        <h1>Sing up</h1>
+                        <p>Get access to your Orders, Wishlist and Recommendations</p>
+                        <img src="/static/image/loginmg.png" alt="" style="position:relative;top:13rem">
+                      </div>
+                    </div>
+                    <div id="loginfrom">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                      <form action="" method="Post">
+                        <input type="text" placeholder="Enetr Mobile Number"><br><br>
+                        <p>By continuing, you agree to Flipkart's <a href=""> Terms of Use</a> and <a href="">
+                            Privacy<br>
+                            Policy.</a></p>
+                        <button id="lbn" class="fs-5 fw-bold mx-5 text-white">CONTINUE</button>
+                        <button class="shadow-lg fs-5 fw-bold mx-5">Exsting User? Log in</button>
+
+                      </form>
+                      <a href="" class="text-decoration-none fw-bold mx-5" id="acne">New to Flipkart ? Create an
+                        account</a>
+
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+
+              <li>
+                <hr><a class="dropdown-item" href="#"><i class="fa-solid fa-user"></i> My profile</a>
+              </li>
+              <li>
+                <!-- <hr class="dropdown-divider"> -->
+              </li>
+              <li>
+                <hr><a class="dropdown-item " href="#"> <i class="fa-solid fa-puzzle-piece"></i> Flipcard Zon</a>
+              </li>
+              <li>
+                <hr><a class="dropdown-item " href="#"> <i class="fa-solid fa-box"></i> Orders</a>
+              </li>
+              <li>
+                <hr><a class="dropdown-item " href="#"> <i class="fa-solid fa-heart"></i> Wishlist</a>
+              </li>
+              <li>
+                <hr><a class="dropdown-item " href="#"> <i class="fa-solid fa-book"></i> Rewards</a>
+              </li>
+              <li>
+                <hr><a class="dropdown-item " href="#"><i class="fa-solid fa-gift"></i> Gifts </a>
+              </li>
+
+            </ul>
+          </li>
+          <li class="nav-item text-white">
+            <a class="nav-link mx-2 text-white fw-bold" href="#">Become a Seller</a>
+
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle mx-2  text-white fs-5 fw-bold" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              More
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link text-white mx-2  fw-bold"><i class="fa-solid fa-cart-shopping"></i> Card</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="nav-scroller bg-body shadow-sm mx-5" id="sechederhd">
+    <nav class="nav nav-underline mx-5" aria-label="Secondary navigation">
+      {% for a in catt %}
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          {{a.name}}
+        </a>
+
+        <ul class="dropdown-menu" id="ul_in_ul0">
+          {% for catgry in a.catogory_set.all %}
+          <li class="d-flex"><a class="dropdown-item" href="/mobile-phones-store?categorysand={{catgry.id}}"><b>
+                {{catgry.name}}</b></a></li>
+
+
+          {% for sb in catgry.subcatogory_set.all %}
+          <li class="d-flex"><a class="dropdown-item" href="/pro?probrand={{sb.id}}">{{sb.name}}</a></li>
+          {% endfor %}
+
+          {% comment %} <li><a class="dropdown-item" href="#">Mi</a></li>
+          <li><a class="dropdown-item" href="#">Realme</a></li>
+          <li><a class="dropdown-item" href="#">Samsung</a></li>
+          <li><a class="dropdown-item" href="#">Infinix</a></li>
+          <li><a class="dropdown-item" href="#"> OPPO</a></li>
+          <li><a class="dropdown-item" href="#">Apple</a></li>
+          <li><a class="dropdown-item" href="#">Vivo</a></li>
+          <li><a class="dropdown-item" href="#">Honor</a></li>
+          <li><a class="dropdown-item" href="#">Asus</a></li>
+          <li><a class="dropdown-item" href="#">Poco X2</a></li>
+          <li><a class="dropdown-item" href="#">realme Narzo 10</a></li>
+          <li><a class="dropdown-item" href="#">Infinix Hot 9</a></li>
+          <li><a class="dropdown-item" href="#">IQOO 3</a></li>
+          <li><a class="dropdown-item" href="#">iPhone SE</a></li>
+          <li><a class="dropdown-item" href="#">Motorola razr</a></li>
+          <li><a class="dropdown-item" href="#">realme Narzo 10A</a></li>
+          <li><a class="dropdown-item" href="#">Motorola g8 power lite</a></li> {% endcomment %}
+
+          {% endfor %}
+        </ul>
+
+        {% comment %} <ul class="dropdown-menu bg-light" id="ul_in_ul1">
+          <li><a class="dropdown-item" href="#"><b>Mobile Accessories ></b></a></li>
+          <li><a class="dropdown-item" href="#">Mobile Cases</a></li>
+          <li><a class="dropdown-item" href="#">Headphones & Headsets</a></li>
+          <li><a class="dropdown-item" href="#">Power Banks</a></li>
+          <li><a class="dropdown-item" href="#">Screenguards</a></li>
+          <li><a class="dropdown-item" href="#">Memory Cards</a></li>
+          <li><a class="dropdown-item" href="#">Smart Headphones</a></li>
+          <li><a class="dropdown-item" href="#">Mobile Cables</a></li>
+          <li><a class="dropdown-item" href="#">Mobile Chargers</a></li>
+          <li><a class="dropdown-item" href="#">Mobile Holders</a></li>
+          <li><a class="dropdown-item" href="#"><b>Smart Wearable Tech ></b></a></li>
+          <li><a class="dropdown-item" href="#">Smart Watches</a></li>
+          <li><a class="dropdown-item" href="#">Smart Glasses (VR)</a></li>
+          <li><a class="dropdown-item" href="#">Smart Bands</a></li>
+          <li><a class="dropdown-item" href="#"><b>Health Care Appliances ></b></a></li>
+          <li><a class="dropdown-item" href="#">Bp Monitors</a></li>
+          <li><a class="dropdown-item" href="#">Weighing Scale</a></li>
+
+
+
+        </ul>
+        <ul class="dropdown-menu" id="ul_in_ul2">
+          <li><a class="dropdown-item" href="#"><b>Laptops ></b></a></li>
+          <li><a class="dropdown-item" href="#">Gaming Laptops</a></li>
+          <li><a class="dropdown-item" href="#"><b>Desktop PCs ></b></a></li>
+          <li><a class="dropdown-item" href="#"><b>Gaming & Accessories ></b></a></li>
+          <li><a class="dropdown-item" href="#"><b>Computer Accessories ></b></a></li>
+          <li><a class="dropdown-item" href="#">External Hard Disks</a></li>
+          <li><a class="dropdown-item" href="#">Pendrives</a></li>
+          <li><a class="dropdown-item" href="#">Laptop Skins & Decals</a></li>
+          <li><a class="dropdown-item" href="#">Laptop Bags</a></li>
+          <li><a class="dropdown-item" href="#">Mouse</a></li>
+          <li><a class="dropdown-item" href="#"><b>Computer Peripherals></b></a></li>
+          <li><a class="dropdown-item" href="#">Printers & Ink Cartridges</a></li>
+          <li><a class="dropdown-item" href="#">Monitors</a></li>
+          <li><a class="dropdown-item" href="#"><b>Tablets ></b></a></li>
+          <li><a class="dropdown-item" href="#">Apple iPads</a></li>
+
+
+        </ul>
+        <ul class="dropdown-menu bg-light" id="ul_in_ul3">
+          <li><a class="dropdown-item" href="#">Televisions</a></li>
+          <li><a class="dropdown-item" href="#"><b>Speakers ></b></a></li>
+          <li><a class="dropdown-item" href="#">Home Audio Speakers</a></li>
+          <li><a class="dropdown-item" href="#">Home Theatres</a></li>
+          <li><a class="dropdown-item" href="#">Soundbars</a></li>
+          <li><a class="dropdown-item" href="#">Bluetooth Speakers</a></li>
+          <li><a class="dropdown-item" href="#">DTH Set Top Box</a></li>
+          <li><a class="dropdown-item" href="#"><b>Smart Home Automation ></b></a></li>
+          <li><a class="dropdown-item" href="#">Google Nest</a></li>
+          <li><a class="dropdown-item" href="#"><b>Camera ></b></a></li>
+          <li><a class="dropdown-item" href="#">DSLR & Mirrorless</a></li>
+          <li><a class="dropdown-item" href="#">Compact & Bridge Cameras</a></li>
+          <li><a class="dropdown-item" href="#">Sports & Action</a></li>
+          <li><a class="dropdown-item" href="#"><b>Camera Accessories ></b></a></li>
+          <li><a class="dropdown-item" href="#">Lens</a></li>
+          <li><a class="dropdown-item" href="#">Tripods</a></li>
+          <li><a class="dropdown-item" href="#"><b>Network Components ></b></a></li>
+          <li><a class="dropdown-item" href="#">Routers</a></li>
+
+        </ul>
+        <ul class="dropdown-menu" id="ul_in_ul4">
+          <li><a class="dropdown-item" href="#"><b>Featured </b></a></li>
+          <li><a class="dropdown-item" href="#">Google Assistant Store</a></li>
+          <li><a class="dropdown-item" href="#">Laptops on Buyback Guarantee</a></li>
+          <li><a class="dropdown-item" href="#">Flipkart SmartBuy</a></li>
+          <li><a class="dropdown-item" href="#">Li-Polymer Power Banks</a></li>
+          <li><a class="dropdown-item" href="#">Sony PS4 Pro & Slim</a></li>
+          <li><a class="dropdown-item" href="#">Apple Products</a></li>
+          <li><a class="dropdown-item" href="#">Microsoft Store</a></li>
+          <li><a class="dropdown-item" href="#">Lenovo Phab Series</a></li>
+          <li><a class="dropdown-item" href="#">JBL Speakers</a></li>
+          <li><a class="dropdown-item" href="#">Smartphones On Buyback</a></li>
+          <li><a class="dropdown-item" href="#">Guarantee</a></li>
+          <li><a class="dropdown-item" href="#">Philips</a></li>
+          <li><a class="dropdown-item" href="#">Dr. Morepen</a></li>
+          <li><a class="dropdown-item" href="#">Complete Mobile Protection</a></li>
+          <li><a class="dropdown-item" href="#">Huawei Watch Gt 2e Smart Watch</a></li>
+          <li><a class="dropdown-item" href="#">Mobiles No Cost EMI</a></li>
+        </ul> {% endcomment %}
+
+
+      </li>
+
+
+      {% comment %} <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          TVs & Appliances
+
+        </a>
+        <ul class="dropdown-menu" id="ul_in_ul0">
+          <li><a class="dropdown-item" href="#"><b>Television ></b></a></li>
+          <li><a class="dropdown-item" href="#"><b>New Launches</b></a></li>
+          <li><a class="dropdown-item" href="#"><b>Smart & Ultra HD</b></a></li>
+          <li><a class="dropdown-item" href="#"><b>Top Brands</b></a></li>
+          <li><a class="dropdown-item" href="#">Thomson</a></li>
+          <li><a class="dropdown-item" href="#"> Mi</a></li>
+          <li><a class="dropdown-item" href="#">Vu</a></li>
+          <li><a class="dropdown-item" href="#">Samsung</a></li>
+          <li><a class="dropdown-item" href="#">iFFALCON by TCL</a></li>
+          <li><a class="dropdown-item" href="#">Nokia</a></li>
+          <li><a class="dropdown-item" href="#">LG</a></li>
+          <li><a class="dropdown-item" href="#">realme</a></li>
+          <li><a class="dropdown-item" href="#">Motorola</a></li>
+          <li><a class="dropdown-item" href="#"><b>Shop by Screen Size</b></a></li>
+          <li><a class="dropdown-item" href="#">24 & below</a></li>
+          <li><a class="dropdown-item" href="#">28-32</a></li>
+          <li><a class="dropdown-item" href="#">39-43</a></li>
+          <li><a class="dropdown-item" href="#">48-55</a></li>
+          <li><a class="dropdown-item" href="#">60 & above</a></li>
+
+
+        </ul>
+
+        <ul class="dropdown-menu bg-light" id="ul_in_ul1">
+          <li><a class="dropdown-item" href="#"><b>Washing Machine ></b></a></li>
+          <li><a class="dropdown-item" href="#">Fully Automatic Front Load</a></li>
+          <li><a class="dropdown-item" href="#">Semi Automatic Top Load</a></li>
+          <li><a class="dropdown-item" href="#">Fully Automatic Top Load</a></li>
+          <li><a class="dropdown-item" href="#"><b>Air Conditioners ></b></a></li>
+          <li><a class="dropdown-item" href="#">Inverter AC</a></li>
+          <li><a class="dropdown-item" href="#">Split ACs</a></li>
+          <li><a class="dropdown-item" href="#">Window ACs</a></li>
+          <li><a class="dropdown-item" href="#"><b>Shop By Brand</b></a></li>
+          <li><a class="dropdown-item" href="#">LG</a></li>
+          <li><a class="dropdown-item" href="#">Hitachi</a></li>
+          <li><a class="dropdown-item" href="#">Carrier</a></li>
+          <li><a class="dropdown-item" href="#"><b>Double Door</b></a></li>
+          <li><a class="dropdown-item" href="#">Single Door</a></li>
+          <li><a class="dropdown-item" href="#">Double Door</a></li>
+          <li><a class="dropdown-item" href="#">Triple door</a></li>
+          <li><a class="dropdown-item" href="#">Side by Side</a></li>
+          <li><a class="dropdown-item" href="#">Convertible</a></li>
+
+
+
+        </ul>
+        <ul class="dropdown-menu" id="ul_in_ul2">
+          <li><a class="dropdown-item" href="#"><b>Kitchen Appliances ></b></a></li>
+          <li><a class="dropdown-item" href="#">Microwave Ovens</a></li>
+          <li><a class="dropdown-item" href="#">Oven Toaster Grills (OTG)</a></li>
+          <li><a class="dropdown-item" href="#">Juicer/Mixer/Grinder</a></li>
+          <li><a class="dropdown-item" href="#">Electric Kettle</a></li>
+          <li><a class="dropdown-item" href="#">Induction Cooktops</a></li>
+          <li><a class="dropdown-item" href="#">Chimneys</a></li>
+          <li><a class="dropdown-item" href="#">Hand Blenders</a></li>
+          <li><a class="dropdown-item" href="#">Sandwich Makers</a></li>
+          <li><a class="dropdown-item" href="#">Pop Up Toasters</a></li>
+          <li><a class="dropdown-item" href="#">Electric Cookers</a></li>
+          <li><a class="dropdown-item" href="#">Wet Grinders</a></li>
+          <li><a class="dropdown-item" href="#">Food Processors</a></li>
+          <li><a class="dropdown-item" href="#">Coffee Makers</a></li>
+          <li><a class="dropdown-item" href="#">Dishwashers</a></li>
+          <li><a class="dropdown-item" href="#"><b>Healthy Living Appliances ></b></a></li>
+
+
+        </ul>
+        <ul class="dropdown-menu bg-light" id="ul_in_ul3">
+          <li><a class="dropdown-item" href="#"><b>Small Home Appliances ></b></a></li>
+          <li><a class="dropdown-item" href="#">Irons</a></li>
+          <li><a class="dropdown-item" href="#">Water Purifiers</a></li>
+          <li><a class="dropdown-item" href="#">Fans</a></li>
+          <li><a class="dropdown-item" href="#">Air Coolers</a></li>
+          <li><a class="dropdown-item" href="#">Inverters</a></li>
+          <li><a class="dropdown-item" href="#">Vacuum Cleaners</a></li>
+          <li><a class="dropdown-item" href="#">Sewing Machines</a></li>
+          <li><a class="dropdown-item" href="#">Immersion Rods</a></li>
+          <li><a class="dropdown-item" href="#">Voltage Stabilizer</a></li>
+          <li><a class="dropdown-item" href="#">Water Geysers</a></li>
+          <li><a class="dropdown-item" href="#"><b>Top Brands</b></a></li>
+          <li><a class="dropdown-item" href="#">Livpure</a></li>
+          <li><a class="dropdown-item" href="#"><b>Philips</b></a></li>
+          <li><a class="dropdown-item" href="#">Bajaj</a></li>
+          <li><a class="dropdown-item" href="#">FIB</a></li>
+          <li><a class="dropdown-item" href="#">Eureka Forbes</a></li>
+          <li><a class="dropdown-item" href="#">Kaff</a></li>
+
+        </ul>
+        <ul class="dropdown-menu" id="ul_in_ul4">
+          <li><a class="dropdown-item" href="#"><b>Buying Guides</b></a></li>
+          <li><a class="dropdown-item" href="#">Televisions</a></li>
+          <li><a class="dropdown-item" href="#">Washing Machines</a></li>
+          <li><a class="dropdown-item" href="#">Flipkart SmartBuy</a></li>
+          <li><a class="dropdown-item" href="#">Refrigerators</a></li>
+          <li><a class="dropdown-item" href="#">Air Conditioners</a></li>
+          <li><a class="dropdown-item" href="#">Water Purifiers</a></li>
+          <li><a class="dropdown-item" href="#">Air Purifiers</a></li>
+          <li><a class="dropdown-item" href="#">Chimneys</a></li>
+          <li><a class="dropdown-item" href="#">Water Geysers</a></li>
+          <li><a class="dropdown-item" href="#"><b>New Launches</b></a></li>
+          <li><a class="dropdown-item" href="#">Nokia (55) 4K Android TV</a></li>
+          <li><a class="dropdown-item" href="#">Mi (32) 4A Pro Android TV</a></li>
+          <li><a class="dropdown-item" href="#">MarQ (43) FHD Smart TV</a></li>
+          <li><a class="dropdown-item" href="#">LG Refrigerators</a></li>
+          <li><a class="dropdown-item" href="#">Thomson (40) 4K Smart TV</a></li>
+          <li><a class="dropdown-item" href="#">Kodak (22) | (32) LED TVs</a></li>
+          <li><a class="dropdown-item" href="#">Whirlpool Refrigerators</a></li>
+        </ul>
+
+      </li>
+
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          Baby & Kids
+
+
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          Men
+
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          Women
+
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          Home & Furniture
+
+
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          Sports, Books & More
+
+
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </li> {% endcomment %}
+      {% endfor %}
+
+      <a class="nav-link text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Offer Zone
+      </a>
+
+
+      <a class="nav-link text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Flights
+      </a>
+
+
+    </nav>
+  </div>
+
+
+  {% block body %}
+
+  {% endblock body %}
+
+
+  <!-- 
+  <!- Flickity HTML init --
+  <div  data-flickity='{ "wrapAround": true }' id="mainsilider">
+    <div id="mainsilderimage"><img src="/static/image/mini.png" alt=""></div>
+    <div id="mainsilderimage"><img src="/static/image/mini.png" alt=""></div>
+    <div id="mainsilderimage"><img src="/static/image/mini.png" alt=""></div>
+    <div id="mainsilderimage"><img src="/static/image/mini.png" alt=""></div>
+ 
+  </div><br><br> -->
+
+
+
+  <!-- footer  -->
+  <footer id="footer1">
+    <div id="ftulfull1" class="mx-5">
+      <ul>
+        <td>About</td>
+        <li><a href="">Contact US</a></li>
+        <li><a href="">About US</a></li>
+        <li><a href="">Careers</a></li>
+        <li><a href="">Flipkart Stories</a></li>
+        <li><a href="">Press</a></li>
+        <li><a href="">Flipkart Wholesale</a></li>
+        <li><a href="">Corporate Information</a></li>
+      </ul>
+      <ul>
+        <td>Help</td>
+        <li><a href="">Payments</a></li>
+        <li><a href="">Shipping</a></li>
+        <li><a href="">Cancellation & Returns</a></li>
+        <li><a href="">FAQ</a></li>
+        <li><a href="">Report Infringement</a></li>
+        <li><a href=""></a></li>
+
+      </ul>
+      <ul>
+        <td>Policy</td>
+        <li><a href="">Return Policy</a></li>
+        <li><a href="">Terms Of Use</a></li>
+        <li><a href="">Security</a></li>
+        <li><a href="">Privacy</a></li>
+        <li><a href="">Sitemap</a></li>
+        <li><a href="">EPR Compliance</a></li>
+      </ul>
+      <ul>
+        <td>Social</td>
+        <li><a href="">Facebook</a></li>
+        <li><a href="">Twitter</a></li>
+        <li><a href="">YouTube</a></li>
+      </ul>
+      <ul>
+        <li><img src="/static/image/flg6ln.PNG" alt=""></li>
+      </ul>
+      <ul>
+        <td>Mail us</td>
+        <li>Flipkart Internet Private Limited,</li>
+        <li>Buildings Alyssa, Begonia &</li>
+        <li>Clove Embassy Tech Village,</li>
+        <li>Outer Ring Road, Devarabeesanahalli Village,</li>
+        <li>Bengaluru, 560103,</li>
+        <li>Karnataka, India</li>
+      </ul>
+      <ul>
+        <td>Registered Office Address:</td>
+        <li>Flipkart Internet Private Limited,</li>
+        <li>Buildings Alyssa, Begonia &</li>
+        <li>Clove Embassy Tech Village,</li>
+        <li>Outer Ring Road, Devarabeesanahalli Village,</li>
+        <li>Bengaluru, 560103,</li>
+        <li>Karnataka, India</li>
+        <li>CIN : U51109KA2012PTC066107</li>
+        <li>Telephone: <a href="" class="text-primary">044-45614700</a></li>
+        <li></li>
+      </ul>
+    </div>
+    <hr class="text-white">
+    <div id="ftulfull">
+      <ul>
+        <li><img src="/static/image/footerlg1.PNG" alt=""><a href="">Become a Seller</a></li>
+        <li><img src="/static/image/footerlg2.PNG" alt=""><a href="">Advertise</a></li>
+        <li><img src="/static/image/flg3.PNG" alt=""><a href="">Gift Cards</a></li>
+        <li><img src="/static/image/flg4.PNG" alt=""><a href="">Help Center</a></li>
+        <li>© 2007-2023 Flipkart.com</li>
+        <li><img src="/static/image/flg5.PNG" alt=""><a href=""></a></li>
+      </ul>
+    </div>
+  </footer>
+    <!-- ajex of django -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+  <!-- extranal file -->
+  <script src="/static/js/indexjquery.js"></script>
+  <script src="/static/js/index.js"></script>
+  <!-- jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- thi is owl courser links -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- this is bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <!-- flicli silder  -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <!-- owl-carousel script -->
+
+ 
+
+</body>
+
+</html>

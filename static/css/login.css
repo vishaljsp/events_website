@@ -1,0 +1,56 @@
+#loginfrom {
+    position: absolute;
+    left: 20rem;
+    top: 3rem
+}
+
+#loginfrom .btn-close {
+    float: right;
+    position: relative;
+    /* left: 5rem; */
+    top: -2.5rem;
+
+}
+
+#loginfrom input {
+    width: 357px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+#loginfrom p {
+    font-size: 13px;
+    color: rgb(150, 148, 148);
+}
+
+#loginfrom #accne {
+    position: relative;
+    top: 6rem;
+}
+#loginfrom #otpinput{
+    display: none;
+}
+#loginfrom #acne {
+    border: none;
+    width: 280px;
+    height: 50px;
+    position: relative;
+    top: 2rem;
+}
+
+#loginfrom #lbn {
+    /* text-align: center; */
+    border: none;
+    width: 280px;
+    height: 50px;
+
+    background: orange;
+
+}
+
+
+/* hover of ul heder  */
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}

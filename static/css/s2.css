@@ -1,0 +1,19 @@
+
+/* #ul_in_ul00{
+    width:5rem;
+    /* background:red; *
+    height: 600px;
+    display: inline-flex;
+    display: ;
+
+} */
+#submenu{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: red;
+}
+#submenu ul{
+    /* width: 100%; */
+    display: flex;
+}

@@ -1,0 +1,51 @@
+/* https://www.youtube.com/watch?v=U0IePAAWIsk */
+
+#zoomxmg{
+    width: 650px;
+    height: 630px;
+    background: white;
+    overflow: hidden;
+}
+#zoomxmg ul {
+    float: left;
+}
+
+#zoomxmg ul li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+#zoomxmg ul li img {
+    width: 70px;
+    height: 70px;
+    margin-top: 1rem;
+    transition: 0s;
+    
+
+}
+
+#zoomxmg #slidesmmg{
+    height: 400px;
+    overflow: hidden;
+}
+.big_image {
+    width: 500px;
+    height: 500px;
+    margin-left: 0.5rem;
+    margin-top: -1rem;
+}
+
+#zoomxmg #btnss ul{
+    display: flex;
+    margin-left: 8rem;
+
+}
+#zoomxmg #btnss li{
+    width: 200px;
+    height: 20rem;
+}
+#zoomxmg #btnss li a{
+  text-align: center;
+    background:rgb(255, 217, 4);
+}
+#zoomxmg #btnss li #by{background: orange;}
